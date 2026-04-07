@@ -1,8 +1,13 @@
 package com.example.prayaan;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.widget.*;
+import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -93,6 +98,9 @@ public class ProfileActivity extends AppCompatActivity {
                 Toast.makeText(ProfileActivity.this,
                         "Profile & Preferences Saved",
                         Toast.LENGTH_SHORT).show();
+
+                Intent intent = new Intent(ProfileActivity.this, TripPlanner.class);
+                startActivity(intent);
             }
         });
     }
